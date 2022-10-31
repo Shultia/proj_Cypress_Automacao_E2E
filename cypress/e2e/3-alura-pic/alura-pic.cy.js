@@ -17,7 +17,7 @@ describe('Busca alura pic', () => {
     it(' Verifica mensagem de email invalido', () => {
         cy.contains('a', 'Register now').click();
         cy.contains('button', 'Register').click();
-        cy.get('input[formcontrolname="email"]').type('thiago');
+        cy.get('input[formcontrolname="email"]').type('flavio');
         cy.contains('ap-vmessage', 'Invalid e-mail').should('be.visible');
     })
 
@@ -29,6 +29,18 @@ describe('Busca alura pic', () => {
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');
     })
 
+    it('fazer login de usuario valido', () => {
+        cy.login('flavio','123')
+        cy.contains('a','(Logout)').should('be.visible');
+    })
+
+
+    it('fazer login de usuario invalido', () => {
+        cy.login('thiago','12344')
+        cy.on('window:alert',(str) => {
+            expect(str).to.equal('Invalid user name or password')
+        })
+    })
 
 })
 
