@@ -1,23 +1,15 @@
 {
-  "name": "proj_cypress_automacao_e2e",
+  "name": "primeiro-projeto",
   "version": "1.0.0",
-  "description": "Primeiro projeto com cypress",
+  "description": "Primeiro projeto com Cypress",
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Hiuszo/proj_Cypress_Automacao_E2E.git"
-  },
-  "author": "Thiago Cordeiro Dantas",
+  "author": "Jacqueline Oliveira",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Hiuszo/proj_Cypress_Automacao_E2E/issues"
-  },
-  "homepage": "https://github.com/Hiuszo/proj_Cypress_Automacao_E2E#readme",
   "devDependencies": {
-    "cypress": "^10.11.0",
+    "cypress": "^9.1.1",
     "mochawesome": "^7.1.3"
   }
 }
